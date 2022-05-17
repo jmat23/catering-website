@@ -1481,10 +1481,8 @@ input, select, textarea {
 /* Image */
 
 	.mainlogo {
-		display: block;
-		margin-left: auto;
-		margin-right: auto:
-		width: 40%;
+		display: flex;
+		justify-content: center;
 		margin-bottom: 50px;
 	}
 
