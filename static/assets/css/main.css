@@ -1957,7 +1957,7 @@ input, select, textarea {
 	}
 
 		#header > .container {
-			padding: 14em 0 7em 0;
+			padding: 4em 0 4em 0;
 			border-bottom: solid 2px #e5e5e5;
 			box-shadow: inset 0px -8px 0px 0px #fff, inset 0px -10px 0px 0px #e5e5e5;
 		}
@@ -2185,8 +2185,8 @@ input, select, textarea {
 				top: 50%;
 				width: 35px;
 				height: 141px;
-				margin-top: -70px;
 				background: url("images/bracket.svg");
+				margin-top: -70px;
 				opacity: 0.15;
 			}
 
