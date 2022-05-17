@@ -224,6 +224,13 @@ input, select, textarea {
 				width: 68em;
 			}
 
+			p {
+				text-align: justify;
+				margin-bottom: 2em;
+				margin-top: -3.5em;
+				font-weight: bolder;
+				font-size: 14pt;
+			}
 		}
 
 		@media screen and (max-width: 1280px) {
@@ -232,6 +239,12 @@ input, select, textarea {
 				width: calc(100% - 80px);
 			}
 
+			p {
+				text-align: justify;
+				margin-bottom: 2em;
+				margin-top: -2em;
+				font-weight: bolder;
+			}
 		}
 
 		@media screen and (max-width: 980px) {
@@ -246,6 +259,14 @@ input, select, textarea {
 
 			.container {
 				width: calc(100% - 40px);
+			}
+
+			p {
+				text-align: justify;
+				margin-bottom: 2em;
+				margin-top: 0em;
+				font-weight: bolder;
+				font-size: 11pt;
 			}
 
 		}
