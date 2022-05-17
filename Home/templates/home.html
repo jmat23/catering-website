@@ -21,8 +21,8 @@
 					<div class="container">
 
 						<!-- Logo -->
-							<h1 id="logo"><a href="index.html">Strongly Typed</a></h1>
-							<p>A responsive HTML5 site template. Manufactured by HTML5 UP.</p>
+							<span class="mainlogo"><img src="{% static 'images/mago.jpg' %}" alt="Magos logo" width="300" /> </span>
+							<h1 id="logo"><a href="index.html">Mago's Homemade</a></h1>
 
 						<!-- Nav -->
 							<nav id="nav">
@@ -213,12 +213,12 @@
 		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="{% static '/assets/js/jquery.min.js' %}"></script>
+			<script src="{% static '/assets/js/jquery.dropotron.min.js' %}"></script>
+			<script src="{% static '/assets/js/browser.min.js' %}"></script>
+			<script src="{% static '/assets/js/breakpoints.min.js' %}"></script>
+			<script src="{% static '/assets/js/util.js' %}"></script>
+			<script src="{% static '/assets/js/main.js' %}"></script>
 
 	</body>
 </html>
