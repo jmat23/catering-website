@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE HTML>
 <!--
 	Strongly Typed by HTML5 UP
@@ -36,7 +35,16 @@
 									<p>Mago's Homemade. A range of diversity quite broad flavorsome - 
 									from sweet to sour to salty. Letting each flavor have its own way 
 									without having to blend together and yet resulting to dishes that 
-									have that delightful, enjoyable and enchanting taste.</p>
+									have that delightful, enjoyable and enchanting taste. </p>
+									
+									{% for i in menu %}
+										<h1>{{i.name}}</h1>
+										<h2>
+											{% if i.stock.0 > 0 %} S {% else %} <a class="icon solid fa-ban"></a> {% endif %} 
+											{% if i.stock.1 > 0 %} M {% else %} <a class="icon solid fa-ban"></a> {% endif %} 
+											{% if i.stock.2 > 0 %} L {% else %} <a class="icon solid fa-ban"></a> {% endif %} 
+										</h2>
+									{% endfor %}
 								</article>
 						</div>
 					</div>
