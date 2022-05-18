@@ -17,14 +17,14 @@
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				<!-- <section id="header"> -->
+				<section id="header">
 					<div class="container">
 
 						<!-- Logo -->
 							<span class="mainlogo"><img src="{% static 'images/mago.jpg' %}" alt="Magos logo" width=150em /> </span>
-							<h1 id="logo"><a href="index.html">Mago's Homemade</a></h1>
+							<h1 id="logo"><a href="">Mago's Homemade</a></h1>
 					</div>
-				<!-- </section> -->
+				</section>
 
 			<!-- Main -->
 				<section id="main">
@@ -38,12 +38,12 @@
 									without having to blend together and yet resulting to dishes that 
 									have that delightful, enjoyable and enchanting taste.</p>
 								</article>
-								<div class="centerbutton"> 
-									<button href="/link/to/page2">Order Food Now</button> 
-								</div>
-								<div class="centerbutton"> 
-									<button href="/link/to/page2">Equipment Hire</button>
-								</div>
+								<form action="/orders" class="centerbutton"> 
+									<button type="submit">Order Food Now</button> 
+								</form>
+								<form action="/equipment" class="centerbutton"> 
+									<button type="submit">Equipment Hire</button> 
+								</form>
 						</div>
 					</div>
 				</section>
