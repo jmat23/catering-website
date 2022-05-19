@@ -32,18 +32,42 @@
 							<!-- Post -->
 								<article class="box post">
 									<h2 class="centertitle">Menu</h2>
-									{% for i in menu %}
+									<!-- {% for i in menu %}
 										<h1>{{i.name}}</h1>
 										<h2>
 											{% if i.stock.0 > 0 %} S {% else %} <a class="icon solid fa-ban"></a> {% endif %} 
 											{% if i.stock.1 > 0 %} M {% else %} <a class="icon solid fa-ban"></a> {% endif %} 
 											{% if i.stock.2 > 0 %} L {% else %} <a class="icon solid fa-ban"></a> {% endif %} 
 										</h2>
-									{% endfor %}
+									{% endfor %} -->
 								</article>
 						</div>
 					</div>
 				</section>
+			<!-- Features -->
+			<section id="features">
+				<div class="container">
+					<div class="row aln-center">
+
+					{% for i in menu %}
+					<div class="col-4 col-6-medium col-12-small">
+
+						<!-- Feature -->
+						<section>
+							<header>
+								<h3 class="centertitle">{{i.name}}</h3>
+							</header>
+							<h2>
+								{% if i.stock.0 > 0 %} S  {% else %} <a class="icon solid fa-ban"></a> {% endif %} 
+								{% if i.stock.1 > 0 %} M {% else %} <a class="icon solid fa-ban"></a> {% endif %} 
+								{% if i.stock.2 > 0 %} L {% else %} <a class="icon solid fa-ban"></a> {% endif %} 
+							</h2>
+						</section>
+					</div>
+					{% endfor %}
+					</div>
+				</div>
+			</section>
 
 			<!-- Footer -->
 				<section id="footer">
