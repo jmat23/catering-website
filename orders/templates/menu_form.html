@@ -3,7 +3,7 @@
 <!-- action - url to submit -->
 <form action="" method="POST">
     {% csrf_token %}
-    {{form}}
+    <p>{{form.as_ul}}</p>
     <input type="submit" name="Place Order">
 </form>
 
