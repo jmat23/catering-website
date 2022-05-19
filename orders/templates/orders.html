@@ -55,12 +55,12 @@
 						<!-- Feature -->
 						<section>
 							<header>
-								<h3 class="centertitle">{{i.name}}</h3>
+								<h3 class="centertitle">{{i.food_name}}</h3>
 							</header>
 							<h2>
-								{% if i.stock.0 > 0 %} S  {% else %} <a class="icon solid fa-ban"></a> {% endif %} 
-								{% if i.stock.1 > 0 %} M {% else %} <a class="icon solid fa-ban"></a> {% endif %} 
-								{% if i.stock.2 > 0 %} L {% else %} <a class="icon solid fa-ban"></a> {% endif %} 
+								{% if i.s_stock > 0 %} S  {% else %} <a class="icon solid fa-ban"></a> {% endif %} 
+								{% if i.m_stock > 0 %} M {% else %} <a class="icon solid fa-ban"></a> {% endif %} 
+								{% if i.l_stock > 0 %} L {% else %} <a class="icon solid fa-ban"></a> {% endif %} 
 							</h2>
 						</section>
 					</div>
