@@ -1,7 +1,7 @@
 from django.forms import ModelForm
-from .models import food, orders
+from .models import food, order
 
 class ordersForm(ModelForm):
     class Meta:
-        model = orders
+        model = order
         fields = '__all__'
