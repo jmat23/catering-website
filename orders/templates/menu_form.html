@@ -1,0 +1,13 @@
+{% load static %}
+{% block content %}
+<!-- action - url to submit -->
+<form action="" method="POST">
+    {% csrf_token %}
+    <p>{{form.as_ul}}</p>
+    <input type="submit" name="Place Order">
+</form>
+
+{% endblock %}
+
+
+<!-- sdsd % extends 'orders.html' % --> 
