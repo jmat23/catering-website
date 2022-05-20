@@ -18,13 +18,14 @@
 	text-align: center;
 	padding: 15px;
 	color: black;
-	font-weight: 1000;
 	background: #9a6436;
 	width: 12.5%;
 	margin-bottom: 0.5em;
 	margin-top: 0.5em;
 	margin-right: -0.6em;
 	align-items: center;
+	font-family: "Arvo";
+	
 }
 
 .menutabs .tab {
