@@ -10,9 +10,10 @@
 	display: flex;
 	flex-wrap: wrap;
 }
+
 .menutabs label {
 	display: inline-block;
-	border: 1px solid black;
+	border: 0.8px solid black;
 	text-align: center;
 	padding: 15px;
 	color: black;
@@ -21,7 +22,8 @@
 	width: 12.5%;
 	margin-bottom: 0.5em;
 	margin-top: 0.5em;
-	margin-right: -0.5em;
+	margin-right: -0.6em;
+	align-items: center;
 }
 
 .menutabs .tab {
@@ -296,6 +298,11 @@ input, select, textarea {
 				width: calc(100% - 100px);
 			}
 
+			.menutabs label {
+				display: flex;
+				width: 10em;
+				align-items: center;
+			}
 		}
 
 		@media screen and (max-width: 736px) {
@@ -310,6 +317,14 @@ input, select, textarea {
 				margin-top: 0em;
 				font-weight: bolder;
 				font-size: 11pt;
+			}
+
+			.menutabs label {
+				display: flex;
+				width: 10em;
+				padding: 10px;
+				justify-content: center;
+				margin-left: 1.25em;
 			}
 
 		}
