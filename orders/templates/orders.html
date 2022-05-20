@@ -29,9 +29,79 @@
 				<section id="main">
 					<div class="container">
 						<div id="content">
+							<h2 class="centertitle">Menu</h2> 
+							<div class="menutabs">
+								<input type="radio" id="chickentab" name="menutabs" checked="checked">
+								<label for="chickentab">Chicken</label>
+								<div class="tab">
+									<!-- Features -->
+									<section id="features">
+										<div class="container">
+											<div class="row aln-center">
+
+											{% for i in menu %}
+											<div class="col-4 col-6-medium col-12-small">
+
+												<!-- Feature -->
+												<section>
+													<header>
+														<h3 class="centertitle">{{i.food_name}}</h3>
+													</header>
+													<h2>
+														{% if i.s_stock > 0 %} S  {% else %} <a class="icon solid fa-ban"></a> {% endif %} 
+														{% if i.m_stock > 0 %} M {% else %} <a class="icon solid fa-ban"></a> {% endif %} 
+														{% if i.l_stock > 0 %} L {% else %} <a class="icon solid fa-ban"></a> {% endif %} 
+													</h2>
+												</section>
+											</div>
+											{% endfor %}
+											</div>
+										</div>
+								</div>
+
+								<input type="radio" id="porktab" name="menutabs">
+								<label for="porktab">Pork</label>
+								<div class="tab">
+									<h2>-Insert Pork items-</h2></div>
+
+								<input type="radio" id="beeftab" name="menutabs">
+								<label for="beeftab">Beef</label>
+								<div class="tab">
+									<h2>-Insert Beef items-</h2>
+								</div>
+
+								<input type="radio" id="seafoodtab" name="menutabs">
+								<label for="seafoodtab">Seafood</label>
+								<div class="tab">
+									<h2>-Insert Seafood items-</h2>
+								</div>
+
+								<input type="radio" id="vegetabletab" name="menutabs">
+								<label for="vegetabletab">Vegetable</label>
+								<div class="tab">
+									<h2>-Insert Vegetable items-</h2>
+								</div>
+
+								<input type="radio" id="pastatab" name="menutabs">
+								<label for="pastatab">Pasta</label>
+								<div class="tab">
+									<h2>-Insert Pasta items-</h2>
+								</div>
+
+								<input type="radio" id="souptab" name="menutabs">
+								<label for="souptab">Soup</label>
+								<div class="tab">
+									<h2>-Insert Soup items-</h2>
+								</div>
+
+								<input type="radio" id="desserttab" name="menutabs">
+								<label for="desserttab">Dessert</label>
+								<div class="tab">
+									<h2>-Insert Dessert items-</h2>
+								</div>
+							</div>
 							<!-- Post -->
-								<article class="box post">
-									<h2 class="centertitle">Menu</h2>
+								<article class="box post">	
 									<!-- {% for i in menu %}
 										<h1>{{i.name}}</h1>
 										<h2>
@@ -44,29 +114,6 @@
 						</div>
 					</div>
 				</section>
-			<!-- Features -->
-			<section id="features">
-				<div class="container">
-					<div class="row aln-center">
-
-					{% for i in menu %}
-					<div class="col-4 col-6-medium col-12-small">
-
-						<!-- Feature -->
-						<section>
-							<header>
-								<h3 class="centertitle">{{i.food_name}}</h3>
-							</header>
-							<h2>
-								{% if i.s_stock > 0 %} S  {% else %} <a class="icon solid fa-ban"></a> {% endif %} 
-								{% if i.m_stock > 0 %} M {% else %} <a class="icon solid fa-ban"></a> {% endif %} 
-								{% if i.l_stock > 0 %} L {% else %} <a class="icon solid fa-ban"></a> {% endif %} 
-							</h2>
-						</section>
-					</div>
-					{% endfor %}
-					</div>
-				</div>
 			</section>
 
 			<!-- Footer -->
