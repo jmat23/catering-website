@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import food
-from .forms import ordersForm
+from .models import food, food_product, order_item
+from .forms import ordersForm, orderAddItem
 
 # Create your views here.
 def tests(request):
@@ -9,13 +9,23 @@ def tests(request):
 	return render(request, 'orders.html', {'menu': menu})
 
 def createOrder(request):
-	form = ordersForm()
+	menu = food_product.objects.all()
+	form1 = ordersForm()
+	form2 = orderAddItem()
 	if request.method == 'POST':
 		# print('Printing POST:', request.POST)
-		form = ordersForm(request.POST)
-		if form.is_valid():
-			form.save()
+		form1 = ordersForm(request.POST)
+		form2 = orderAddItem(request.POST)
+		if form1.is_valid():
+			neworder = form1.save()
+		
+		for items in menu:
+			# if request.POST.get(items.name) != 0:
+			order_item.objects.create(parent_order = neworder, product = items, quantity = request.POST.getlist(items.name)[0])
+		if form1.is_valid():
+			# form1.save()
+			form2.save()
 			return redirect('/')
 	
-	context = {'form': form}
+	context = {'form1': form1, 'form2': form2, 'menu': menu}
 	return render(request, 'menu_form.html', context)

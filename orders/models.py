@@ -61,7 +61,7 @@ class food_product(models.Model):
 class order_item(models.Model):
     parent_order = models.ForeignKey(order, null=True, on_delete=models.SET_NULL)
     product = models.ForeignKey(food_product, null=True, on_delete=models.SET_NULL)
-    quantity = models.IntegerField(default = 1)
+    quantity = models.IntegerField(default = 0)
 
     def __str__(self):
         return str(self.parent_order.id)
