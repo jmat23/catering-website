@@ -58,6 +58,9 @@
 .menu-item {
 	display: flex;
 	margin-bottom: 2em;
+	border: 3px solid grey;
+	padding: 20px;
+	border-radius: 10px 10px 10px 10px;
 }
 
 .menu-group-image {
@@ -393,7 +396,9 @@ input, select, textarea {
 				flex-grow: 1;
 				font-size: 10.5px;
 			}
-
+			.menu-item {
+				margin-bottom: -0.5em;
+			}
 		}
 
 /* Row */
