@@ -1,18 +1,22 @@
-{% load static %}
-{% block content %}
-<!-- action - url to submit -->
-<form action="" method="POST">
-    {% csrf_token %}
-    {% for i in menu %}
-    <p> {{i.parent_food.food_name}} {{i.size}} </p>
-    <input type="number" id = {{i.name}} name = {{i.name}} min = "0" max = {{i.stock}}>
-    {% endfor %}
-    <p>{{form1.as_ul}}</p>
-    <p>{{form2.as_ul}}</p>
-    <input type="submit" name="Place Order">
-</form>
+{% extends 'empty.html' %}
+    {% load static %}
+    {% block content %}
+        <section id="main">
+            <div class="container">
+                <div id="content">
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        {% for i in menu %}
+                        <p> {{i.parent_food.food_name}} {{i.size}} </p>
+                        <input type="number" id = {{i.name}} name = {{i.name}} min = "0" max = {{i.stock}}>
+                        {% endfor %}
+                        <p>{{form1.as_p}}</p>
+                        <input type="submit" name="Place Order">
+                    </form>
+                </div>
+            </div>
+        </section>
 
-{% endblock %}
-
+    {% endblock %}
 
 <!-- sdsd % extends 'orders.html' % --> 

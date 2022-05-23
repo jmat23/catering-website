@@ -11,11 +11,9 @@ def tests(request):
 def createOrder(request):
 	menu = food_product.objects.all()
 	form1 = ordersForm()
-	form2 = orderAddItem()
 	if request.method == 'POST':
 		# print('Printing POST:', request.POST)
 		form1 = ordersForm(request.POST)
-		form2 = orderAddItem(request.POST)
 		if form1.is_valid():
 			neworder = form1.save()
 		
@@ -24,8 +22,7 @@ def createOrder(request):
 			order_item.objects.create(parent_order = neworder, product = items, quantity = request.POST.getlist(items.name)[0])
 		if form1.is_valid():
 			# form1.save()
-			form2.save()
 			return redirect('/')
 	
-	context = {'form1': form1, 'form2': form2, 'menu': menu}
+	context = {'form1': form1, 'menu': menu}
 	return render(request, 'menu_form.html', context)
